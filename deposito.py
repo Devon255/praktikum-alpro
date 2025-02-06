@@ -1,8 +1,8 @@
 import math
 
-uang = 200 
+uang = 200000000
 bunga = 0.1
-target = 400
+target = 400000000
 
 tahun_yang_dibutuhkan = math.log(target/uang)/math.log(1+bunga)
 
