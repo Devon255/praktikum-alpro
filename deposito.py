@@ -1,10 +1,11 @@
-import math
-
 uang = 200000000
 bunga = 0.1
 target = 400000000
 
-tahun_yang_dibutuhkan = math.log(target/uang)/math.log(1+bunga)
 
-print(f"Yang diperlukan Erika untuk cuan 400 jt adalah {tahun_yang_dibutuhkan:.2f}tahun")
+for tahun in range(20):
+    uang += uang * bunga
+    if uang >= target:
+        break
 
+print("Yang diperlukan Erika untuk cuan 400 jt adalah",tahun,"tahun")
