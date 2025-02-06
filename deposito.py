@@ -3,7 +3,7 @@ bunga = 0.1
 target = 400000000
 
 
-for tahun in range(20):
+for tahun in range(1,20):
     uang += uang * bunga
     if uang >= target:
         break
