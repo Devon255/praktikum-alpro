@@ -3,7 +3,7 @@ import random
 
 def mencari_email(email):
     email = email.lower()
-    cari = re.findall(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+",email)
+    cari = re.findall("\S+@\S+",email)
 
 
     def password(panjang = 8):
