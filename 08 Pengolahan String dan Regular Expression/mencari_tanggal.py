@@ -4,14 +4,20 @@ def mencari_tanggal(kalimat):
     tanggal = re.findall(r"\d{4}-\d{2}-\d{2}", kalimat)
     tahun_sekarang = 2025
     bulan_sekarang = 4
-    tanggal_sekarang = 22
+    tanggal_sekarang = 24
 
     def kabisat(tahun):
-        return (tahun % 4 == 0 and tahun % 100 != 0) or (tahun % 400 == 0)
+        if tahun % 4 == 0 and tahun % 100 != 0 or tahun % 400 == 0:
+            return True
+        else:
+            return False
 
     def jumlah_hari(bulan, tahun):
         if bulan == 2:
-            return 29 if kabisat(tahun) else 28
+            if kabisat(tahun):
+                return 29
+            else:
+                return 28
         elif bulan in [4, 6, 9, 11]:
             return 30
         else:
