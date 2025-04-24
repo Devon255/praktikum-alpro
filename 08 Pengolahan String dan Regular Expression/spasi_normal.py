@@ -2,7 +2,7 @@ def spasi_normal(kalimat):
     kalimat = kalimat.split(" ")
     for i in kalimat:
         if i.isalpha():
-            print(i, end=" ")
+            print(i,end=" ")
     print()
 
 
